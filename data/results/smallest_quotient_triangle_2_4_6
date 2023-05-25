@@ -1,3 +1,11 @@
+# script:
+#   smallest_quotient_triangle_2mn.gap
+#
+# input data:
+#   m := 4
+#   n := 6
+#
+# output:
 
   Size 24
  -------------------
