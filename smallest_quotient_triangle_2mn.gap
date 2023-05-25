@@ -3,14 +3,21 @@
 # to find non-orientable surface-kernel quotients 
 # of an NEC group with signature (0;+;[-];{(2,m,n)})
 
-# input periods
+# Warnings:
+# 1. Not all orders are included in the library.
+#   For details, see https://docs.gap-system.org/pkg/smallgrp/doc/chap0.html
+# 2. For certain orders, the database contains a large number of
+#   non-isomorphic groups. Computations can take a long time.
+
+# input data ###################
+# periods
 m := 4 ;; n := 6;;
 
 # orders multiple of...
-base := 4*m*n/(m*n-2*m-2*n);;
+base := 4*m*n/(m*n-2*m-2*n);; # comes from Riemann-Hurwitz formula
 size := base;;
 
-# presentation for the NEC group  
+# presentation for the NEC triangle group  
 f := FreeGroup( "a", "b", "c" );;
 Gmm := f / [ f.1^2, f.2^2, f.3^2, (f.1*f.2)^2, (f.2*f.3)^m, (f.3*f.1)^n ];;
 
@@ -31,7 +38,7 @@ while total = 0 do
         
         G := SmallGroup(size, j);
         
-        # find all quotients
+        # find all quotients (all epimorphisms Gmm -> G)
         quots := GQuotients( Gmm, G );
 
         # loop over all quotients
@@ -46,7 +53,7 @@ while total = 0 do
 
               # check that the kernel is non-orientable
               i := Index(G, K);
-              if i = 1 then # non-orientable
+              if i = 1 then # non-orientable kernel
 
                   # check orders - make sure it acts with the desired signature
                   if Order(a)=2 and Order(b)=2 and Order(c)=2 and Order(a*b)=2 
