@@ -1,0 +1,21 @@
+# script:
+#   antipodal_generating_pair.gap
+#
+# input data:
+   m := 3;;
+   n := 18;;
+   x := (1,10)(2,11)(3,5)(4,7)(6,8);;
+   y := (1,2,3)(4,5,6)(7,8,9);;
+   b := (1, 2)(4, 6)(7, 8)(10, 11);;
+
+# output:
+
+ Structure of G = <x,y> = S11.
+ |G| = 39916800.
+ G Is transitive: true.
+ G Is primitive: true.
+ G contains the mirror reflection b. {x,y} is an antipodal pair.
+ G acts with signature (0;+;[-];{(2,3,18)}) under the epimorphism:
+    a -> ( 1,11)( 2,10)( 3, 5)( 4, 8)( 6, 7)
+    b -> ( 1, 2)( 4, 6)( 7, 8)(10,11)
+    c -> ( 1, 3)( 5, 6)( 7, 9)(10,11)
