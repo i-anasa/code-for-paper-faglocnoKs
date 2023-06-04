@@ -47,8 +47,8 @@ Print("\n\n");
 P := PresentationFpGroup( Range(hom) );;
 TzGoGo(P);;
 Print(
-    "Presentation of N:\n Generators: ",
-    GeneratorsOfPresentation(P), "\n"
+    "Presentation for N:\n Generators: ",
+    GeneratorsOfPresentation(P), "\n Relators:\n"
 );;
 TzPrintRelators(P);
 
