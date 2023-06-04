@@ -13,5 +13,5 @@ Some families of groups are presented. For each one, there is a base finite grou
 
 Second, a presentation is derived for each family of groups, based on the properties of certain surface-kernel subgroup in an NEC triangle group with this given signature.
 
-All results concerning the family of groups acting with signature (0;+;[-];{(2,4,6)}) have been obtained using the script "family_quotients_triangle_2_4_6.gap", and the results are discussed in the file "family_quotients_triangle_2_4_6". Similarly, signature (0;+;[-];{(2,4,6)}) is analyzed using the script "family_quotients_triangle_2_5_6.gap", and the results are discussed in the file "family_quotients_triangle_2_5_6".
+All results concerning the family of groups acting with signature (0;+;[-];{(2,4,6)}) have been obtained using the script "family_quotients_triangle_2_4_6.gap", and the results are discussed in the file "family_quotients_triangle_2_4_6". Similarly, signature (0;+;[-];{(2,5,6)}) is analyzed using the script "family_quotients_triangle_2_5_6.gap", and the results are discussed in the file "family_quotients_triangle_2_5_6".
 
