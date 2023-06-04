@@ -1,0 +1,42 @@
+# script:
+#   family_quotients_triangle_2_5_6.gap
+#
+
+# output:
+N=<x1,..,x4> normal in Gamma? true
+
+Conjugation table:
+
+  xi                  xi^a                xi^b                xi^c
+---------------------------------------------------------------------
+  x1                    x1               x1^-1                  x2
+  x2                    x3   x1^-1*x2*x3*x4^-1                  x1
+  x3                    x2                  x4               x3^-1
+  x4     x1^-1*x2*x3*x4^-1                  x3   x2^-1*x1*x4*x3^-1
+
+#I  there are 4 generators and 6 relators of total length 24
+Presentation for N:
+ Generators: [ x1, x2, x3, x4 ]
+ Relators:
+#I  1. x1*x3*x1^-1*x3^-1
+#I  2. x3^-1*x2^-1*x3*x2
+#I  3. x4*x2^-1*x4^-1*x2
+#I  4. x3*x4*x3^-1*x4^-1
+#I  5. x1^-1*x2*x1*x2^-1
+#I  6. x1*x4^-1*x1^-1*x4
+
+  Properties of the quotient:
+-------------------------------------
+ Size: 120
+ Description: C2 x A5
+ Id: [ 120, 35 ]
+ Orders of the elements: 
+  o(a) = 2 |  o(b) = 2 |  o(c) = 2 |  o(ab) = 2 |  o(bc) = 5 |  o(ca) = 6
+   
+# comments:
+The 6 relators in the presentation for the group N
+mean that N is free abelian of rank 4.
+  
+The fact that the orders of the generators a,b,c and their products 
+are preserved in the quotient G/N mean that this (and all intermediate)
+quotients act with the NEC signature (0;+;[-];{(2,5,6)}).
