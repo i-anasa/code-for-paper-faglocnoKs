@@ -79,7 +79,7 @@ Is L Abelian? true
 # comments
 
 - Adding to the presentation for G the relator [X1, X3], is equivalent to
-  adding the relator  [((c*a)^5)^a, (a*c)^5 ]
+  adding the relator  [((c*a)^5)^a, ((a*c)^5)]
 
 - From the relators 1-36 in the presentation of the subgroup L (in G/K), it is clear
   that it is Abelian. The Abelian invariants reveal that L is isomorphic to
@@ -87,6 +87,6 @@ Is L Abelian? true
   since all generators (F1, through F6 are conjugated elements in G).
   
   Finally, for odd n, the group with presentation
-  < a,c | a^5, c^2, [a,c]^2, (ac)^(5n), [((c*a)^5)^a, (a*c)^5 ] >
+  < a,c | a^5, c^2, [a,c]^2, (ac)^(5n), [((c*a)^5)^a, ((a*c)^5)] >
   is an extension of Cn^5 by (C2 x C2 x C2 x C2) : C5, of order 80 n^5,
   and acts with signature (0;+;[5];{(2)}).
