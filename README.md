@@ -33,3 +33,6 @@ All results concerning the family of groups acting with signature (0;+;[-];{(2,4
 ### Section 5.1 Signatures of type (a)
 
 Theorem 5.1 states that for each pair of values (t,u), there is a group acting with that signature on a surface, not the full group, that extends to an infinite family with the same properties. The code for each pair is in the script "extending_infinite_family_case_a_t_u.gap", and the results are discussed in the file "extending_infinite_family_case_a_t_u".
+
+Theorem 5.2 states that for each pair of values (t,u), there is a group acting with that signature on a surface, as the full group of automorphisms, that extends to an infinite family with the same properties. The orders of the groups and genera are too big to obtain presentations for the infinite families of groups, so we obtain just one group for each case. The code for each pair is in the script "non-extending_case_a_t_u.gap", and the results are discussed in the file "non-extending_case_a_t_u".
+
