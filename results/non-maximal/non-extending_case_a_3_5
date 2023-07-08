@@ -1,0 +1,31 @@
+# script:
+#   non-extending_case_a_3_5.gap
+
+# output:
+
+  Properties of G:
+-------------------------------------
+ Size: 87360
+ Orders of the elements: 
+  o(a) = 3 |  o(c) = 2 |  o([a,c]]) = 5
+ 
+ Map h: a |-> a^(-1), c |-> c :
+   ... is not a valid homomorphism. 
+ Images of identity: 29120 
+
+  Properties of h(G):
+-------------------------------------
+ Size: 3
+ Orders of the elements: 
+  o(a) = 3 |  o(c) = 1 |  o([a,c]]) = 1
+
+# comments:
+
+We use the GAP function GroupGeneralMappingByImages and check
+if it defines a valid map, which it doesn't, because it is multivalued.
+
+Additionally, we explore the group that results from adding the extra relator 
+h(w) (when h is considered as a map from the free group to itself).
+The order of G drops from 87360 to 3 (by a factor of 29120, precisely).
+Therefore, the group G (which acts with signature (0;+;[3];{(5}))
+does not admit the automorphism h.
