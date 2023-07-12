@@ -51,8 +51,7 @@ for j in x_G do
 od;
 
 # presentation
-isom := IsomorphismFpGroup(N);;
-RN   := Range(isom);;
+RN   := Range(hom);;
 P    := PresentationFpGroup(RN);;
 
 # Simplify and print a presentation for N
