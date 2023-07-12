@@ -38,7 +38,7 @@ Print("\n  Is N normal in G? ", IsNormal(G, N), ".\n");
 # Conjugation table of the generators of (normal) subgroup L 
 hom := IsomorphismFpGroupByGenerators(N, x_G, "x");;
 Print(
-    "\n Generators of the (normal) subgroup L. Conjugation table:\n\n  xi  ",
+    "\n Generators of the (normal) subgroup N. Conjugation table:\n\n  xi  ",
     PrintString("xi^a",ts), PrintString("xi^c",ts), 
     "\n--------------------------------------------------------------------------"
 );
