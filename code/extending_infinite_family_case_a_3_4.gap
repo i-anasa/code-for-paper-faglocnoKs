@@ -76,8 +76,8 @@ Print("\nPresentation for the subgroup L (in G/K):\n");
 x_K := List(x, i -> ElementOfFpGroup( FamilyObj( GmodK.1 ), i ));;
 N := Subgroup(GmodK, x_K);;
 isom := IsomorphismFpGroupByGenerators(N, x_K, "x");;
-RN   := Range(isom);;
-P    := PresentationFpGroup(RN);;
+P    := PresentationFpGroup( Range(isom) );;
+TzGoGo(P);;
 TzGoGo(P);;
 TzPrintRelators(P);
 
