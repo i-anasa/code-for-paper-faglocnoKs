@@ -45,12 +45,23 @@ Assuming further that x1 commutes with x2:
 # comments:
 
 The relator in the presentation for the group L
+  x4*x2^-1*x1*x3^-1*x2*x4*x3^-1*x1^-1
 is cyclically equivalent to 
   (x1*x3*x2^-1)^2 *  (x2*x3^-2)^2 * (x3)^2 *  (x4*x3^-1*x1^-1)^2.
-from which a new set of generators y1,...,y4 can be derived 
-with a one relation presentation:
+from which a new set of generators {y1,...,y4} can be derived 
+according to the table
+  y1 = x1*x3*x2^-1        x1 = y1 * y2 * y3
+  y2 = x2*x3^-2           x2 = y2 * y3^2
+  y3 = x3                 x3 = y3
+  y4 = x4*x3^-1*x1^-1     x4 = y4 * y1 * y2 * y3^2
+Notice that every new generator is a word of odd length in the old
+set of generators, meaning that they are indeed orientation-reversing
+elements.
+
+A presentation in terms of the new generators has this one relation:
    y1^1 * y2^2 * y3^2 * y4^2 = 1.
-   
+so it is a non-orientable surface group.
+
 Assumming further that [x1,x2] = 1, the new relators can be rewritten as:
 #I  1. [F1, F3]
 #I  2. [F2, F4]
