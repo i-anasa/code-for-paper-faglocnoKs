@@ -75,7 +75,7 @@ Print("\nPresentation for the subgroup L (in G/K):\n");
 # again, the extra relator, and their conjugates.
 x_K := List(x, i -> ElementOfFpGroup( FamilyObj( GmodK.1 ), i ));;
 N := Subgroup(GmodK, x_K);;
-isom := IsomorphismFpGroup(N);;
+isom := IsomorphismFpGroupByGenerators(N, x_K, "x");;
 RN   := Range(isom);;
 P    := PresentationFpGroup(RN);;
 TzGoGo(P);;
