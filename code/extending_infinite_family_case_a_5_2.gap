@@ -8,7 +8,7 @@ t := 5;;
 u := 2;;
 
 # tab size (for tabular outputs).
-ts := 30;;
+ts := 35;;
 
 # Base group.
 f := FreeGroup( "a", "c");;
@@ -48,9 +48,7 @@ for j in x_G do
 od;
 
 # presentation
-isom := IsomorphismFpGroup(N);;
-RN   := Range(isom);;
-P    := PresentationFpGroup(RN);;
+P    := PresentationFpGroup( Range(hom) );;
 
 # Simplify and print a presentation for N
 Print("\n\n\nPresentation for N:\n");
@@ -74,9 +72,8 @@ Print("\nPresentation for the subgroup L (in G/K):\n");
 # again, the extra relator, and their conjugates.
 x_K := List(x, i -> ElementOfFpGroup( FamilyObj( GmodK.1 ), i ));;
 N := Subgroup(GmodK, x_K);;
-isom := IsomorphismFpGroup(N);;
-RN   := Range(isom);;
-P    := PresentationFpGroup(RN);;
+isom := IsomorphismFpGroupByGenerators(N, x_K, "x");;
+P    := PresentationFpGroup( Range(isom) );;
 TzGoGo(P);;
 TzPrintRelators(P);
 
