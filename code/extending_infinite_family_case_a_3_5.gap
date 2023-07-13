@@ -20,7 +20,7 @@ x2 := c*x1*c;;
 x3 := a^-1*x2*a;;
 x4 := c*x3*c;;
 x5 := a^-1*x4*a;;
-x6 := a^-1*x5*a;;
+x6 := c*x5*c;;
 x := [x1, x2, x3, x4, x5, x6];;
 
 # NEC group with signature sigma
@@ -35,7 +35,7 @@ Print("\n  Is N normal in G? ", IsNormal(G, N), ".\n");
 # Conjugation table of the generators of (normal) subgroup L 
 hom := IsomorphismFpGroupByGenerators(N, x_G, "x");;
 Print(
-    "\n Generators of the (normal) subgroup L. Conjugation table:\n\n  xi  ",
+    "\n Generators of the (normal) subgroup N. Conjugation table:\n\n  xi  ",
     PrintString("xi^a",ts), PrintString("xi^c",ts), 
     "\n--------------------------------------------------------------------------"
 );
@@ -48,9 +48,7 @@ for j in x_G do
 od;
 
 # presentation
-isom := IsomorphismFpGroup(N);;
-RN   := Range(isom);;
-P    := PresentationFpGroup(RN);;
+P    := PresentationFpGroup( Range(hom) );;
 
 # Simplify and print a presentation for N
 Print("\n\n\nPresentation for N:\n");
@@ -67,15 +65,13 @@ Print("\n\n\n");
 Print("Assuming further that x1 commutes with x5:\n");; 
 k := x_G[1]^-1*x_G[5]^-1*x_G[1]*x_G[5];;
 GmodK := FactorGroupFpGroupByRels( G, [k] );;
-#projk := GroupHomomorphismByImages( G, GmodK, [a,c], [GmodK.1, GmodK.2] );
 
 Print("\nPresentation for the subgroup L (in G/K):\n");
 # again, the extra relator, and their conjugates.
 x_K := List(x, i -> ElementOfFpGroup( FamilyObj( GmodK.1 ), i ));;
 N := Subgroup(GmodK, x_K);;
-isom := IsomorphismFpGroup(N);;
-RN   := Range(isom);;
-P    := PresentationFpGroup(RN);;
+isom := IsomorphismFpGroupByGenerators(N, x_K, "x");;
+P    := PresentationFpGroup( Range(isom) );;
 TzGoGo(P);;
 TzPrintRelators(P);
 
