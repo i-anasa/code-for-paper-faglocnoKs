@@ -26,7 +26,9 @@ Print (
     "\n  Products:\n",
     "   ab = ", x, "\n",
     "   bc = ", y, "\n",
-    "   ca = ", c*a, "\n"
+    "   ca = ", c*a, "\n",
+    "\n  Odd length relator:\n",
+    "   abc = ", a*b*c, ", (of order 9)\n"
 );;
 
 # Show properties and orders:
