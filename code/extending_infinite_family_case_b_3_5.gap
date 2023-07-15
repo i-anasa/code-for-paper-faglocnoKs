@@ -58,8 +58,8 @@ Print("\n\n\n");
 
 
 # Add the commutator relator k
-### [(acb)^3, ((cba)^(bac))^3]
-Print("Assuming further that x1 commutes with x5:\n");; 
+### [(acb)^3, ((cba)^(b))^3]
+Print("Assuming further that x1 commutes with x3:\n");; 
 k := x_G[1]^-1*x_G[3]^-1*x_G[1]*x_G[3];;
 GmodK := FactorGroupFpGroupByRels( G, [k] );;
 
