@@ -15,8 +15,8 @@ a := f.1;; b := f.2;; c := f.3;;
 x1 := (a*c*b)^3;;
 x2 := a*x1*a;;      
 x3 := b*x2*b;;
-x4 := a*x3*a;; 
-x5 := c*x4*c;; 
+x4 := c*x3*c;; 
+x5 := b*x4*b;; 
 x6 := a*x5*a;;
 x := [x1, x2, x3, x4, x5, x6];;
 
@@ -33,15 +33,15 @@ Print("\n  Is N normal in G? ", IsNormal(G, N), ".\n");
 hom := IsomorphismFpGroupByGenerators(N, x_G, "x");;
 Print(
     "\n Generators of the (normal) subgroup L. Conjugation table:\n\n  xi  ",
-PrintString("xi^a",5), PrintString("xi^b",25), PrintString("xi^c",60), 
+    PrintString("xi^a",25), PrintString("xi^b",25), PrintString("xi^c",25), 
     "\n--------------------------------------------------------------------------"
 );
 for j in x_G do 
     Print(
         "\n  ", Image(hom,j), "  ",
-        PrintString(Image(hom,a*j*a), 5),
-    PrintString(Image(hom,b*j*b), 25),
-    PrintString(Image(hom,c*j*c), 60)
+        PrintString(Image(hom,a*j*a), 25),
+        PrintString(Image(hom,b*j*b), 25),
+        PrintString(Image(hom,c*j*c), 25)
     );
 od;
 
@@ -60,16 +60,16 @@ Print("\n\n\n");
 # Add the commutator relator k
 ### [(acb)^3, ((cba)^(bac))^3]
 Print("Assuming further that x1 commutes with x5:\n");; 
-k := x_G[1]^-1*x_G[5]^-1*x_G[1]*x_G[5];;
+k := x_G[1]^-1*x_G[3]^-1*x_G[1]*x_G[3];;
 GmodK := FactorGroupFpGroupByRels( G, [k] );;
 
 Print("\nPresentation for the subgroup L (in G/K):\n");
 # again, the extra relator, and their conjugates.
 x_K := List(x, i -> ElementOfFpGroup( FamilyObj( GmodK.1 ), i ));;
-N := Subgroup(GmodK, x_K);;
-isom := IsomorphismFpGroupByGenerators(N, x_K, "x");;
+L := Subgroup(GmodK, x_K);;
+isom := IsomorphismFpGroupByGenerators(L, x_K, "x");;
 P    := PresentationFpGroup( Range(isom) );;
-TzGoGo(P);;
+TzGoGo(P);;TzGoGo(P);;TzGoGo(P);;
 TzPrintRelators(P);
 
 # Reveal the Abelian structure of N
@@ -78,7 +78,7 @@ Print("\nAbelian invariants of L:\n", AbelianInvariants( RN ), "\n");
 Print("\nIs L Abelian? ", IsAbelian(RN), "\n");
 
 # Base finite group
-G1 := GmodK / N;;
+G1 := GmodK / L;;
 # rename generators
 a := G1.1;; b := G1.2;; c := G1.3;;
 
