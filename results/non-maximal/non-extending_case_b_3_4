@@ -1,0 +1,31 @@
+# script:
+#   non-extending_case_b_3_4.gap
+
+# output:
+
+  Properties of the quotient:
+-------------------------------------
+ Size: 69120
+ Orders of the elements: 
+  o(a) = 2 |  o(b) = 2 |  o(c) = 2 |  o(ab) = 3 |  o(bc) = 3 |  o(ca) = 4
+ 
+ Map h: a |-> c, b |-> b, c |-> a :
+   ... is not a valid homomorphism. 
+ Images of identity: 64 
+
+  Properties of the quotient when adding h(w) = 1:
+-------------------------------------
+ Size: 1080
+ Orders of the elements: 
+  o(a) = 2 |  o(b) = 2 |  o(c) = 2 |  o(ab) = 3 |  o(bc) = 3 |  o(ca) = 4
+
+# comments:
+
+We use the GAP function GroupGeneralMappingByImages and check
+if it defines a valid map, which it doesn't, because it is multivalued.
+
+Additionally, we explore the group that results from adding the extra relator 
+h(w) (when h is considered as a map from the free group to itself).
+The order of G drops from 69120 to 1080 (by a factor of 64, precisely).
+Therefore, the group G (which acts with signature (0;+;[-];{(3,3,4)}))
+does not admit the automorphism h.
