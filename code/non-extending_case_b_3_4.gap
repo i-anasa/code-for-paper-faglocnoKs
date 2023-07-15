@@ -49,7 +49,7 @@ hw := ((b*c*a*c)^2*a)^3;;
 hG := FactorGroupFpGroupByRels(G, [hw]);;
 a := hG.1;; b := hG.2;; c := hG.3;;
 Print (
-    "\n  Properties of the quotient:\n-------------------------------------",
+    "\n  Properties of the quotient when adding h(w) = 1:\n-------------------------------------",
 "\n Size: ", Size(hG),
     "\n Orders of the elements: \n ", 
     " o(a) = ", Order(a), " | ",
