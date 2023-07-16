@@ -1,0 +1,22 @@
+# script:
+#   non-extending_case_c.gap
+
+# output:
+
+
+  Properties of the quotient:
+-------------------------------------
+ Size: 1440
+ Orders of the elements: 
+  o(a) = 2 |  o(b) = 2 |  o(c) = 2 |  o(ab) = 2 |  o(bc) = 4 |  o(ca) = 8
+ 
+Is <b,c> normal in G1? false
+Index in G1 of the normal closure of <b,c>: 1
+
+
+# comments
+
+The group in part i) has order 1440 and acts with signature (0;+;[-];{(2,4,8)}).
+The smallest normal subgroup that contains b and c is the full group,
+and therefore it does not contain a subgroup K as described in Proposition 3.2.
+
