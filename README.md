@@ -30,9 +30,9 @@ All results concerning the family of groups acting with signature (0;+;[-];{(2,4
 
 ## Section 5 Groups acting with non-maximal signatures
 
-### Section 5.1 Signatures of type (a)
+Theorems 5.1 to 5.5 state that for each of the seven signatures discussed -three in cases (a) and (b), depending on some parameters t and u, and one in case (c)-, there is a group acting with that signature on a non-orientable surface, not the full group, and also a 
+group acting with that signature on a non-orientable surface as the full group of automorphisms. For some of them, an explicit presentation for an infinite family of groups is derived.
 
-Theorem 5.1 states that for each pair of values (t,u), there is a group acting with that signature on a surface, not the full group, that extends to an infinite family with the same properties. The code for each pair is in the script "extending_infinite_family_case_a_t_u.gap", and the results are discussed in the file "extending_infinite_family_case_a_t_u".
+Extending groups and families: the code for each case and pair of values is in the script "extending_case_x_t_u_infinite_family.gap", and the results are discussed in the file "extending_case_x_t_u_infinite_family" (or "extending_case_x_t_u.gap" and "extending_case_x_t_u" when only one group is presented). 
 
-Theorem 5.2 states that for each pair of values (t,u), there is a group acting with that signature on a surface, as the full group of automorphisms, that extends to an infinite family with the same properties. The orders of the groups and genera are too big to obtain presentations for the infinite families of groups, so we obtain just one group for each case. The code for each pair is in the script "non-extending_case_a_t_u.gap", and the results are discussed in the file "non-extending_case_a_t_u".
-
+Non-extending groups and families: the code for each case and pair of values is in the script "non-extending_case_x_t_u_infinite_family.gap", and the results are discussed in the file "non-extending_case_x_t_u_infinite_family" (or "non-extending_case_x_t_u.gap" and "non-extending_case_x_t_u" when only one group is presented).
